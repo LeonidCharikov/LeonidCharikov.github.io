@@ -1,0 +1,148 @@
+html {
+    background: #1a1a1a;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+  }
+
+  button {
+    width: 180px;
+    height: 56px;
+    overflow: hidden;
+    border: none;
+    color: #fff;
+    background: none;
+    position: relative;
+    padding-bottom: 2em;
+  }
+  
+  button > div,button > svg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    padding-left: 2;
+  }
+  
+  button:before {
+    content: "";
+    position: absolute;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    background: currentColor;
+    transition: transform 0.25s ease-out;
+  }
+  
+  button:hover:before {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  }
+  
+  button .clone > *,button .text > * {
+    opacity: 1;
+    font-size: 1.3rem;
+    transition: 0.2s;
+    margin-left: 4px;
+  }
+  
+  button .clone > * {
+    transform: translateY(60px);
+  }
+  
+  button:hover .clone > * {
+    opacity: 1;
+    transform: translateY(0px);
+    transition: all 0.2s cubic-bezier(0.215, 0.61, 0.355, 1) 0s;
+  }
+  
+  button:hover .text > * {
+    opacity: 1;
+    transform: translateY(-60px);
+    transition: all 0.2s cubic-bezier(0.215, 0.61, 0.355, 1) 0s;
+  }
+  
+  button:hover .clone > :nth-child(1) {
+    transition-delay: 0.15s;
+  }
+  
+  button:hover .clone > :nth-child(2) {
+    transition-delay: 0.2s;
+  }
+  
+  button:hover .clone > :nth-child(3) {
+    transition-delay: 0.25s;
+  }
+  
+  button:hover .clone > :nth-child(4) {
+    transition-delay: 0.3s;
+  }
+  /* icon style and hover */
+  button svg {
+    width: 20px;
+    right: 0;
+    top: 50%;
+    left: 80%;
+    transform: translateY(-50%) rotate(-50deg);
+    transition: 0.2s ease-out;
+  }
+  
+  button:hover svg {
+    transform: translateY(-50%) rotate(-90deg);
+  }
+
+
+
+  html, body, section {
+    block-size: 100%;
+  }
+  
+  html {
+    scroll-snap-type: y mandatory;
+  }
+  
+  section {
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column; /* nově přidaná vlastnost */
+  }
+  
+
+h2{
+    font-size:1em;
+    text-decoration: none;
+}
+
+a{
+  color:#fff;
+text-decoration: none;
+}
+
+  section:nth-of-type(even) {
+    color: rgb(95, 94, 94);
+    background: #1a1a1a;
+  }
+  
+  section:nth-of-type(odd) {
+    color: #1a1a1a;
+    background: rgb(95, 94, 94);
+  }
+  
+  h1 {
+    margin: 0;
+    font-size: 4rem;
+  }
+
+
+  body{
+    font-family: system-ui, sans-serif;
+    text-decoration:none;
+  }
